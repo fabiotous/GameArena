@@ -11,6 +11,7 @@ public class UserAccount extends JFrame {
     private JButton addAFriendButton;
     private JButton viewAccountStatisticsButton;
     private JTextArea stats;
+    private JButton logOffButton;
     public String username;
 
     public UserAccount(String username) {
@@ -33,6 +34,15 @@ public class UserAccount extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 GameForm gameForm = new GameForm();
                 gameForm.setVisible(true);
+            }
+        });
+
+        logOffButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+                MainMenu m = new MainMenu();
+                m.setVisible(true);
             }
         });
 
