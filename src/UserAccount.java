@@ -12,7 +12,7 @@ public class UserAccount extends JFrame {
     private JButton viewAccountStatisticsButton;
     private JTextArea stats;
     private JButton logOffButton;
-    public String username;
+    private String username;
 
     public UserAccount(String username) {
         this.username = username;

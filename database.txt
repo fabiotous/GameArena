@@ -1,0 +1,73 @@
+Database
+
+Name: Bob Dole
+Email: bob.dole@games.com
+Username: BobLovesGames
+ChessStats
+ - Wins: 0
+ - Loses: 0
+ - Ties: 0
+CheckersStats
+ - Wins: 0
+ - Loses: 0
+ - Ties: 0
+DeathStats
+ - Wins: 0
+ - Loses: 0
+ - Ties: 0
+BlackJackStats
+ - Wins: 0
+ - Loses: 0
+ - Ties: 0
+TournamentLobbyStats
+ - Wins: 0
+ - Loses: 0
+ - Ties: 0
+
+Name: Bell Peper
+Email: bell.peper@nogames.com
+Username: BellDoesntLikeGamesAtAll
+Chess Stats
+ - Wins: 0
+ - Loses: 0
+ - Ties: 0
+Checkers Stats
+ - Wins: 0
+ - Loses: 0
+ - Ties: 0
+Death Stats
+ - Wins: 0
+ - Loses: 0
+ - Ties: 0
+BlackJack Stats
+ - Wins: 0
+ - Loses: 0
+ - Ties: 0
+TournamentLobby Stats
+ - Wins: 0
+ - Loses: 0
+ - Ties: 0
+
+Name: Jesse Chambers
+Email: jesse.chambers@gmail.com
+Username: jesseCool
+Chess Stats
+ - Wins: 0
+ - Loses: 0
+ - Ties: 0
+Checkers Stats
+ - Wins: 0
+ - Loses: 0
+ - Ties: 0
+Death Stats
+ - Wins: 0
+ - Loses: 0
+ - Ties: 0
+BlackJack Stats
+ - Wins: 0
+ - Loses: 0
+ - Ties: 0
+TournamentLobby Stats
+ - Wins: 0
+ - Loses: 0
+ - Ties: 0
