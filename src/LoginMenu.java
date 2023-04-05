@@ -1,6 +1,9 @@
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 
 public class LoginMenu extends JFrame {
     private JPanel panel;
@@ -9,13 +12,16 @@ public class LoginMenu extends JFrame {
     private JLabel usernameLabel;
     private JLabel passwordLabel;
     private JTextField usernameTextField;
-    private JTextField passwordTextField;
     private JButton loginButton;
     private JButton forgotButton;
     private JSeparator sep;
     private JPanel menuPanel;
     private JButton createAccountButton;
     private JLabel createButtonLabel;
+    private JPasswordField passwordField1;
+    private final String url = "jdbc:postgresql://localhost:5432/postgres";
+    private final String user = "postgres";
+    private final String password = "docker";
 
 
     public LoginMenu() {
@@ -34,7 +40,7 @@ public class LoginMenu extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String username = usernameTextField.getText();
-                String password = passwordTextField.getText();
+                String password = passwordField1.getText();
 
                 if (username.length() == 0 || password.length() == 0) {
                     JOptionPane.showMessageDialog(null, "Please enter your username and password.", "Credentials Missing", JOptionPane.ERROR_MESSAGE);
@@ -79,10 +85,23 @@ public class LoginMenu extends JFrame {
             }
         });
     }
+    public Connection connect() {
+        Connection conn = null;
+        try {
+            conn = DriverManager.getConnection(url, user, password);
+            System.out.println("Connected to the PostgreSQL server successfully.");
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+
+        return conn;
+    }
 
         public static void main(String[] args) {
             LoginMenu menu = new LoginMenu();
+            menu.connect();
             menu.setVisible(true);
+
 
     }
 }

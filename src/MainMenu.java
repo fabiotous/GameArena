@@ -20,8 +20,6 @@ public class MainMenu extends JFrame {
         btnLogIn.setVisible(true);
         createAccountButton.setVisible(true);
 
-
-
         setContentPane(backgroundPanel);
         setTitle("Welcome to Game Arena!");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -47,17 +45,7 @@ public class MainMenu extends JFrame {
 
     }
 
-    public Connection connect() {
-        Connection conn = null;
-        try {
-            conn = DriverManager.getConnection(url, user, password);
-            System.out.println("Connected to the PostgreSQL server successfully.");
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
-        }
 
-        return conn;
-    }
 //    public static void main(String[] args) {
 //        MainMenu m = new MainMenu();
 //        m.connect();
