@@ -16,7 +16,7 @@ public class ResetUserForm extends JFrame implements ActionListener {
         returnButton.addActionListener(this);
     }
     public void actionPerformed(ActionEvent ae) {
-        MainMenu page = new MainMenu();
+        LoginMenu page = new LoginMenu();
         page.setVisible(true);
         dispose();
     }

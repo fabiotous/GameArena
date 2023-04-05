@@ -41,7 +41,7 @@ public class UserAccount extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 dispose();
-                MainMenu m = new MainMenu();
+                LoginMenu m = new LoginMenu();
                 m.setVisible(true);
             }
         });
