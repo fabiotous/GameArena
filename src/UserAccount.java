@@ -69,7 +69,7 @@ public class UserAccount extends JFrame {
 
                 // Sample data
                 ArrayList<User> users = new ArrayList<User>();
-                User curuser = new User("KyleP", "kylep@gmail.ca", "Kyle");
+                User curuser = new User("", "", username);
                 users.add(new User("Peter09", "peter@gmail.ca", "Peter"));
                 users.add(new User("John_Sol", "jsol@gmail.ca", "John"));
 
