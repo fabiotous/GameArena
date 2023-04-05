@@ -69,11 +69,12 @@ public class UserAccount extends JFrame {
 
                 // Sample data
                 ArrayList<User> users = new ArrayList<User>();
+                User curuser = new User("KyleP", "kylep@gmail.ca", "Kyle");
                 users.add(new User("Peter09", "peter@gmail.ca", "Peter"));
                 users.add(new User("John_Sol", "jsol@gmail.ca", "John"));
 
                 // Create GUI
-                UserInterface gui = new UserInterface(users);
+                UserInterface gui = new UserInterface(curuser, users);
             }
         });
 
