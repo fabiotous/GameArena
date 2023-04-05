@@ -58,9 +58,9 @@ public class MainMenu extends JFrame {
 
         return conn;
     }
-    public static void main(String[] args) {
-        MainMenu m = new MainMenu();
-        m.connect();
-        m.setVisible(true);
-    }
+//    public static void main(String[] args) {
+//        MainMenu m = new MainMenu();
+//        m.connect();
+//        m.setVisible(true);
+//    }
 }

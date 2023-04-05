@@ -45,8 +45,8 @@ public class CreateAccountPage extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 dispose();
-                MainMenu m = new MainMenu();
-                m.setVisible(true);
+                LoginMenu l = new LoginMenu();
+                l.setVisible(true);
             }
         });
 
