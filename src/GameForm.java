@@ -9,7 +9,7 @@ public class GameForm extends JFrame {
     private JLabel gameLabel;
     private JButton playButton;
     private JButton backButton;
-    private String[] games = {"Chess", "Checkers", "Death", "BlackJack", "TournamentLobby"};
+    private String[] games = {"Chess", "Checkers", "Death", "BlackJack", "TournamentLobby", "TicTacToe"};
 
     public GameForm() {
         Dimension size = Toolkit.getDefaultToolkit().getScreenSize();
@@ -30,6 +30,9 @@ public class GameForm extends JFrame {
                     TournamentGUI gui = new TournamentGUI(player1, player2);
                 } else if (gameList.getSelectedItem() == "BlackJack") {
                     Tester.start(); //we open the menu by a static method.
+                } else if (gameList.getSelectedItem() == "TicTacToe") {
+                    TicTacToe t = new TicTacToe();
+                    t.setVisible(true);
                 } else {
                     dispose();
                 }
