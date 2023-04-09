@@ -63,7 +63,8 @@ public class LoginMenu extends JFrame {
         forgotButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                ForgotUserForm f = new ForgotUserForm();
+                dispose();
+                ForgotPassword f = new ForgotPassword();
                 f.setVisible(true);
             }
         });
