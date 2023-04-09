@@ -6,19 +6,13 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class LoginMenu extends JFrame {
-    private JPanel panel;
-    private JLabel icon;
-    private JLabel title;
-    private JLabel usernameLabel;
-    private JLabel passwordLabel;
+    private JPanel panel, menuPanel;
+    private JLabel icon, title,usernameLabel, passwordLabel, createButtonLabel;
     private JTextField usernameTextField;
-    private JButton loginButton;
-    private JButton forgotButton;
-    private JSeparator sep;
-    private JPanel menuPanel;
-    private JButton createAccountButton;
-    private JLabel createButtonLabel;
     private JPasswordField passwordField1;
+    private JButton loginButton, forgotButton, createAccountButton;
+    private JSeparator sep;
+
     private final String url = "jdbc:postgresql://localhost:5432/postgres";
     private final String user = "postgres";
     private final String password = "docker";
@@ -40,9 +34,9 @@ public class LoginMenu extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String username = usernameTextField.getText();
-                String password = passwordField1.getText();
+                char[] password = passwordField1.getPassword();
 
-                if (username.length() == 0 || password.length() == 0) {
+                if (username.length() == 0 || password.length == 0) {
                     JOptionPane.showMessageDialog(null, "Please enter your username and password.", "Credentials Missing", JOptionPane.ERROR_MESSAGE);
                     return;
                 }
@@ -69,7 +63,8 @@ public class LoginMenu extends JFrame {
         forgotButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                ForgotUserForm f = new ForgotUserForm();
+                dispose();
+                ForgotPassword f = new ForgotPassword();
                 f.setVisible(true);
             }
         });
@@ -78,8 +73,8 @@ public class LoginMenu extends JFrame {
         createAccountButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                dispose();
-                CreateAccountPage c = new CreateAccountPage();
+//                dispose();
+                CreateAccount c = new CreateAccount();
                 c.setVisible(true);
 
             }
