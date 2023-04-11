@@ -1,7 +1,10 @@
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.util.Arrays;
+import java.io.IOException;
 
 public class CreateAccount extends JFrame {
     private JPanel panel;
@@ -18,6 +21,7 @@ public class CreateAccount extends JFrame {
     private JLabel icon;
     private JPasswordField confirmPasswordTextField;
     private JTextField nameTextField;
+    private String[] games = {"Chess", "Checkers", "Death", "BlackJack", "TournamentLobby", "TicTacToe"};
 
     public CreateAccount() {
         ImageIcon iconImg = new ImageIcon("images/controller_small.png");
@@ -49,6 +53,7 @@ public class CreateAccount extends JFrame {
                 username = usernameTextField.getText();
                 email = emailTextField.getText();
                 password = passwordTextField.getPassword();
+                String userPW = String.valueOf(password);
                 confirmPassword = confirmPasswordTextField.getPassword();
 
                 if ( username.length() == 0 || email.length() == 0 || name.length() == 0 || password.length == 0 || confirmPassword.length == 0 )
@@ -68,6 +73,36 @@ public class CreateAccount extends JFrame {
                     dispose();
                     UserAccount u = new UserAccount(username);
                     u.setVisible(true);
+                    BufferedWriter out = null;
+
+                    try {
+                        FileWriter f = new FileWriter("database.txt", true); //true tells to append data.
+                        out = new BufferedWriter(f);
+                        out.write("\n" + "\n" + "Name: " + name);
+                        out.write("\n" + "Email: " + email);
+                        out.write("\n" + "Username: " + username);
+                        out.write("\n" + "Password: " + userPW);
+                        for (String game: games) {
+                            out.write("\n" + game + " Stats");
+                            out.write("\n - Wins: 0");
+                            out.write("\n - Loses: 0");
+                            out.write("\n - Ties: 0");
+                        }
+                    }
+
+                    catch (IOException er) {
+                        System.err.println("Error: " + er.getMessage());
+                    }
+
+                    finally {
+                        if(out != null) {
+                            try {
+                                out.close();
+                            } catch (IOException ex) {
+                                throw new RuntimeException(ex);
+                            }
+                        }
+                    }
                 }
             }
         });

@@ -73,7 +73,7 @@ public class LoginMenu extends JFrame {
         createAccountButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-//                dispose();
+                dispose();
                 CreateAccount c = new CreateAccount();
                 c.setVisible(true);
 

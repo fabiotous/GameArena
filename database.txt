@@ -3,6 +3,7 @@ Database
 Name: Bob Dole
 Email: bob.dole@games.com
 Username: BobLovesGames
+Password: blah
 ChessStats
  - Wins: 0
  - Loses: 0
@@ -27,6 +28,7 @@ TournamentLobbyStats
 Name: Bell Peper
 Email: bell.peper@nogames.com
 Username: BellDoesntLikeGamesAtAll
+Password: BELL
 Chess Stats
  - Wins: 0
  - Loses: 0
@@ -51,6 +53,7 @@ TournamentLobby Stats
 Name: Jesse Chambers
 Email: jesse.chambers@gmail.com
 Username: jesseCool
+Password: joejoe
 Chess Stats
  - Wins: 0
  - Loses: 0
@@ -68,6 +71,93 @@ BlackJack Stats
  - Loses: 0
  - Ties: 0
 TournamentLobby Stats
+ - Wins: 0
+ - Loses: 0
+ - Ties: 0
+
+Name: Jabba the hut
+Email: jabba.hut@gmail.com
+Username: Jabba123
+Password: Jabba123
+Chess Stats
+ - Wins: 0
+ - Loses: 0
+ - Ties: 0
+Checkers Stats
+ - Wins: 0
+ - Loses: 0
+ - Ties: 0
+Death Stats
+ - Wins: 0
+ - Loses: 0
+ - Ties: 0
+BlackJack Stats
+ - Wins: 0
+ - Loses: 0
+ - Ties: 0
+TournamentLobby Stats
+ - Wins: 0
+ - Loses: 0
+ - Ties: 0
+TicTacToe Stats
+ - Wins: 0
+ - Loses: 0
+ - Ties: 0
+
+Name: Luke Skywalker
+Email: luke.sky@starwars.com
+Username: Luke123
+Password: lukey123
+Chess Stats
+ - Wins: 0
+ - Loses: 0
+ - Ties: 0
+Checkers Stats
+ - Wins: 0
+ - Loses: 0
+ - Ties: 0
+Death Stats
+ - Wins: 0
+ - Loses: 0
+ - Ties: 0
+BlackJack Stats
+ - Wins: 0
+ - Loses: 0
+ - Ties: 0
+TournamentLobby Stats
+ - Wins: 0
+ - Loses: 0
+ - Ties: 0
+TicTacToe Stats
+ - Wins: 0
+ - Loses: 0
+ - Ties: 0
+
+Name: Fungi Mushroom
+Email: fungus.mushroom@gamer.com
+Username: fungi123
+Password: fungi123
+Chess Stats
+ - Wins: 0
+ - Loses: 0
+ - Ties: 0
+Checkers Stats
+ - Wins: 0
+ - Loses: 0
+ - Ties: 0
+Death Stats
+ - Wins: 0
+ - Loses: 0
+ - Ties: 0
+BlackJack Stats
+ - Wins: 0
+ - Loses: 0
+ - Ties: 0
+TournamentLobby Stats
+ - Wins: 0
+ - Loses: 0
+ - Ties: 0
+TicTacToe Stats
  - Wins: 0
  - Loses: 0
  - Ties: 0
