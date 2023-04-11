@@ -1,9 +1,11 @@
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.*;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.Scanner;
 
 public class LoginMenu extends JFrame {
     private JPanel panel, menuPanel;
@@ -44,10 +46,42 @@ public class LoginMenu extends JFrame {
                 // Not sure how this is being done, leaving as pseudocode for now
                 // Check txt file or database (?) for matching username and password
 
-                if (true) { // If username and password are correct
-                    dispose();  // Only dispose if correct
-                    UserAccount user = new UserAccount(username);
-                    user.setVisible(true);
+               try {
+                    File file = new File("database.txt");
+                    Scanner scanner = new Scanner(file);
+                    Boolean usernamefound = false;
+                    while (scanner.hasNextLine()) {
+                        String line = scanner.nextLine();
+                        String targetusername = "";
+                        if (line.length() >= 10)
+                        {
+                            if (line.substring(0,9).equals("Username:"))
+                            {
+                                targetusername = line.substring(10);
+                            }
+                        }
+                        if (username.equals(targetusername))
+                        {
+                            usernamefound = true;
+                            String line2 = scanner.nextLine(); //password
+                            if (line2.substring(10).equals(new String(password)))
+                            {
+                                dispose();  // Only dispose if correct
+                                UserAccount user = new UserAccount(username);
+                                user.setVisible(true);
+                            }
+                            else {
+                                JOptionPane.showMessageDialog(null,"Password is invalid, please try again.","Login Error", JOptionPane.ERROR_MESSAGE);
+                            }
+                        }
+                    }
+                    if (usernamefound == false)
+                    {
+                        JOptionPane.showMessageDialog(null,"Invalid username provided, please try again.","Login Error", JOptionPane.ERROR_MESSAGE);
+                    }
+                    scanner.close();
+                } catch (FileNotFoundException f) {
+                    System.out.println("File not found.");
                 }
 
                 // else if (username/password combo is wrong) {
