@@ -161,3 +161,32 @@ TicTacToe Stats
  - Wins: 0
  - Loses: 0
  - Ties: 0
+
+Name: Dark Vader
+Email: dark.vader@starwars.com
+Username: dark123
+Password: blah123
+Chess Stats
+ - Wins: 0
+ - Loses: 0
+ - Ties: 0
+Checkers Stats
+ - Wins: 0
+ - Loses: 0
+ - Ties: 0
+Death Stats
+ - Wins: 0
+ - Loses: 0
+ - Ties: 0
+BlackJack Stats
+ - Wins: 0
+ - Loses: 0
+ - Ties: 0
+TournamentLobby Stats
+ - Wins: 0
+ - Loses: 0
+ - Ties: 0
+TicTacToe Stats
+ - Wins: 0
+ - Loses: 0
+ - Ties: 0
