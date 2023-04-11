@@ -5,6 +5,8 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.util.Arrays;
 import java.io.IOException;
+import java.io.*;
+import java.util.Scanner;
 
 public class CreateAccount extends JFrame {
     private JPanel panel;
@@ -62,7 +64,7 @@ public class CreateAccount extends JFrame {
                 else if (!Arrays.equals(password, confirmPassword))
                     JOptionPane.showMessageDialog(null, "Passwords do not match. Please try again.", "Password Mismatch", JOptionPane.ERROR_MESSAGE);
 
-                else if (emailExists(username))
+                else if (emailExists(email))
                     JOptionPane.showMessageDialog(null, "An account with the email '" + email + "' already exists. Please log in or use another email account.", "Account Exists", JOptionPane.ERROR_MESSAGE);
 
                 else if (usernameExists(username))
@@ -107,14 +109,55 @@ public class CreateAccount extends JFrame {
             }
         });
     }
-
     public boolean usernameExists(String username) {
         /* Lookup username in database */
+        try {
+            File file = new File("database.txt");
+            Scanner scanner = new Scanner(file);
+            while (scanner.hasNextLine()) {
+                String line = scanner.nextLine();
+                String targetusername = "";
+                if (line.length() >= 10)
+                {
+                    if (line.substring(0,9).equals("Username:"))
+                    {
+                        targetusername = line.substring(10);
+                    }
+                }
+                if (username.equals(targetusername))
+                {
+                    return true;
+            }
+            //scanner.close();
+        }} catch (FileNotFoundException f) {
+            System.out.println("File not found.");
+        }
         return false;
     }
 
     public boolean emailExists(String email) {
         /* Lookup email in database */
+        try {
+            File file = new File("database.txt");
+            Scanner scanner = new Scanner(file);
+            while (scanner.hasNextLine()) {
+                String line = scanner.nextLine();
+                String targetemail = "";
+                if (line.length() >= 7)
+                {
+                    if (line.substring(0,6).equals("Email:"))
+                    {
+                        targetemail = line.substring(7);
+                    }
+                }
+                if (email.equals(targetemail))
+                {
+                    return true;
+                }
+                //scanner.close();
+            }} catch (FileNotFoundException f) {
+            System.out.println("File not found.");
+        }
         return false;
     }
 }
